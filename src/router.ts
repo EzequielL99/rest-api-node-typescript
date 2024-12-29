@@ -54,7 +54,7 @@ router.put(
     .withMessage("Precio no válido"),
   body("availability")
     .isBoolean()
-    .withMessage("Valor para disponibilidad no valido."),
+    .withMessage("Valor para disponibilidad no válido."),
   handleInputErrors,
   updateProduct
 );
@@ -63,13 +63,13 @@ router.put(
 router.patch(
   "/:id",
   // Validacion
-  param("id").isInt().withMessage("ID no valido"),
+  param("id").isInt().withMessage("ID no válido"),
   handleInputErrors,
   updateAvailability
 );
 
 router.delete('/:id', 
-    param('id').isInt().withMessage('ID no valido'),
+    param('id').isInt().withMessage('ID no válido'),
     handleInputErrors,
     deleteProduct
 )
